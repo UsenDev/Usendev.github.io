@@ -1,0 +1,341 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 0 20px;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #333;
+    color: #fff;
+}
+
+header h1 {
+    font-size: 3em;
+}
+
+header p {
+    font-size: 1.2em;
+    margin: 10px 0 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Section Styling */
+section {
+    padding: 50px 0;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section p {
+    font-size: 1.1em;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Project Grid */
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project {
+    width: 45%;
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.project img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.project h3 {
+    margin: 20px 0 10px;
+}
+
+.project a {
+    display: inline-block;
+    margin-top: 10px;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Skills Section */
+#skills ul {
+    list-style: none;
+    display: inline-block;
+    padding: 0;
+}
+
+#skills ul li {
+    background: #f4f4f4;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Contact Section */
+#contact a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+/* Social Media Icons Styling */
+#social-media {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#social-media a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #orangered;
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+#social-media a:hover {
+    color: #007bff; /* Changes color on hover */
+}
+
+/* Ensure icons are aligned nicely with text */
+#social-media i {
+    margin-right: 8px;
+}
+
+/*responsive design*/
+.project-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.project {
+    width: 30%; /* Set to 100% for mobile screens using media queries */
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .project {
+        width: 100%; /* Make projects take up full width on small screens */
+    }
+}
+/* General styles for larger screens */
+body {
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+.project-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* Reduce font size for smaller screens */
+    }
+
+    header {
+        padding: 10px;
+    }
+
+    .project-container {
+        flex-direction: column; /* Stack items vertically */
+    }
+
+    .project {
+        width: 100%; /* Projects take up the full width on small screens */
+    }
+}
+
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 12px; /* Even smaller font for mobile */
+    }
+
+    nav ul {
+        display: block; /* Stack navigation links vertically */
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+/* Responsive font sizes */
+h1 {
+    font-size: 4vw; /* 4% of the viewport width */
+}
+
+p {
+    font-size: 1.6vw;
+}
+h1 {
+    font-size: 2.5rem;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+}
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #0056b3;
+}
+html {
+    scroll-behavior: smooth;
+}
+.slider {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#prev {
+    left: 10px;
+}
+
+#next {
+    right: 10px;
+}
