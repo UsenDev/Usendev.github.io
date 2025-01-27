@@ -10,25 +10,93 @@
     <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script type="text/javascript">
        (function(){
-          emailjs.init("cZnU-GPe7A9UAZkjO"); // Replace with your EmailJS user ID
+          emailjs.init("cZnU-GPe7A9UAZkjO");
        })();
     </script>
     <title>Usen-obong Etim Isaiah - Portfolio</title>
     <style>
         body {
-            background-color: #ffffff;
-            color: #000000;
+            background-color: #F5F5F5;
+            color: #333333;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
             transition: background-color 0.3s, color 0.3s;
         }
         body.dark-mode {
-            background-color: #333333;
-            color: #ffffff;
+            background-color: #1A1A40;
+            color: #FFFFFF;
         }
         .toggle-dark-mode {
             position: fixed;
             top: 20px;
             right: 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
             cursor: pointer;
+            font-size: 16px;
+        }
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #007BFF;
+            color: white;
+        }
+        header h1 {
+            font-size: 2.5rem;
+        }
+        header p {
+            font-size: 1.2rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2rem;
+        }
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333333;
+            color: white;
+        }
+        footer a {
+            color: #007BFF;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .slider img {
+            max-width: 100%;
+            height: auto;
         }
     </style>
 </head>
@@ -50,31 +118,18 @@
         <h1>Usen-obong Etim Isaiah</h1>
         <p>A Front End WEB Developer</p>
         <a href="https://www.facebook.com/profile.php?id=100072204322647&mibextid=ZbWKwL">
-            <img src="https://github.com/UsenDev/Usendev.github.io/blob/06a9c8a27907f66dbf926ed790ee7a5e3c0a9d66/IMG_20240714_120450.jpg?raw=true" alt="Profile picture of Usen-obong Etim Isaiah" style="width:300px;height:auto;">
+            <img src="https://github.com/UsenDev/Usendev.github.io/blob/main/my%20portfolio_files/IMG_20240714_120450.jpg?raw=true" alt="Profile picture of Usen-obong Etim Isaiah" style="width:300px;height:auto;border-radius:50%;">
         </a>
     </header>
 
     <!-- About Section -->
     <section id="about">
-        <button id="toggle-about">Show About Me</button>
+        <button id="toggle-about" class="button">Show About Me</button>
         <section id="about-section" style="display: none;">
             <h2>About Me</h2>
             <p>I am Usen-obong Etim Isaiah, I am from Akwa Ibom state, Nigeria. I have a strong desire to build myself in technology. I am currently enrolled in the HTML, CSS, and JavaScript for Web Developers course at Johns Hopkins University, USA.</p>
         </section>
     </section>
-
-    <script>
-        document.getElementById("toggle-about").addEventListener("click", function() {
-            var aboutSection = document.getElementById("about-section");
-            if (aboutSection.style.display === "none") {
-                aboutSection.style.display = "block";
-                this.textContent = "Hide About Me";
-            } else {
-                aboutSection.style.display = "none";
-                this.textContent = "Show About Me";
-            }
-        });
-    </script>
 
     <!-- Projects Section -->
     <section id="projects">
@@ -117,132 +172,6 @@
         <p>Contact me on <a href="http://Wa.me/+2348143713973" target="_blank" rel="noopener noreferrer">WhatsApp</a></p>
     </section>
 
-    <!-- Modal -->
-    <button id="open-modal">Open Modal</button>
-    <div id="myModal" class="modal" style="display: none;">
-        <div class="modal-content">
-            <span id="close-modal" class="close">&times;</span>
-            <h2>Thanks for going through my portfolio</h2>
-            <p>Link up for business <i class="fa-solid fa-envelope"></i> <i class="fa-solid fa-thumbs-up"></i></p>
-            <p><i class="fa-solid fa-phone"></i> +2348143713973</p>
-        </div>
-    </div>
-
-    <script>
-        var modal = document.getElementById("myModal");
-        var openModalBtn = document.getElementById("open-modal");
-        var closeModalBtn = document.getElementById("close-modal");
-
-        openModalBtn.onclick = function() {
-            modal.style.display = "block";
-        };
-
-        closeModalBtn.onclick = function() {
-            modal.style.display = "none";
-        };
-
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-        };
-    </script>
-
-    <!-- Image Slider -->
-    <div class="slider">
-        <img id="slider-img" src="https://raw.githubusercontent.com/UsenDev/Usendev.github.io/15da49cf8c6be801c4dbcef7f918cbcdd44a28ad/WhatsApp%20Image%202024-10-07%20at%2011.49.45_752dd6fe.jpg" alt="Project Image" loading="lazy">
-        <button id="prev">Prev</button>
-        <button id="next">Next</button>
-    </div>
-
-    <script>
-        var images = [
-            "https://raw.githubusercontent.com/UsenDev/Usendev.github.io/432a289458aa719e0a5a9ab53f1b474d69f83d37/WhatsApp%20Image%202024-10-07%20at%2011.14.27_3001f09b.jpg",
-            "https://raw.githubusercontent.com/UsenDev/Usendev.github.io/1c5cfe15b7a112be60c956f01323d967cfa3adf7/WhatsApp%20Image%202024-10-07%20at%2011.14.26_f0dd61e2.jpg",
-            "https://raw.githubusercontent.com/UsenDev/Usendev.github.io/a96f1946f4a18a3fbb944132359c1457acdbc225/WhatsApp%20Image%202024-10-07%20at%2011.14.26_84d959d6.jpg"
-        ];
-        var currentIndex = 0;
-        var imgElement = document.getElementById("slider-img");
-
-        document.getElementById("prev").addEventListener("click", function() {
-            currentIndex = (currentIndex === 0) ? images.length - 1 : currentIndex - 1;
-            imgElement.src = images[currentIndex];
-        });
-
-        document.getElementById("next").addEventListener("click", function() {
-            currentIndex = (currentIndex === images.length - 1) ? 0 : currentIndex + 1;
-            imgElement.src = images[currentIndex];
-        });
-    </script>
-
-    <!-- Contact Form -->
-    <form id="contact-form">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required><br>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required><br>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea><br>
-
-        <button type="submit">Send Message</button>
-    </form>
-
-    <p id="status"></p>
-
-    <script type="text/javascript">
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-            event.preventDefault(); // Prevent the form from submitting in the traditional way
-
-            var templateParams = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
-
-            // Use EmailJS to send the form data
-            emailjs.send('Usen-obong', 'template_nwig1mz', templateParams)
-                .then(function(response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    document.getElementById('status').innerHTML = 'Message sent successfully!';
-                    document.getElementById('contact-form').reset();
-                }, function(error) {
-                    console.log('FAILED...', error);
-                    document.getElementById('status').innerHTML = 'Failed to send message. Please try again.';
-                });
-        });
-    </script>
-
-    <script>
-        document.getElementById("darkModeToggle").addEventListener("click", function() {
-            document.body.classList.toggle("dark-mode");
-            this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
-        });
-    </script>
-
-    <!-- Scroll to Top Button -->
-    <button id="scrollToTopBtn" style="display:none;">Top</button>
-
-    <script>
-        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        };
-
-        scrollToTopBtn.addEventListener("click", function() {
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
-
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 Usen-obong Etim Isaiah. All rights reserved.</p>
@@ -254,10 +183,10 @@
                 <a href="https://www.linkedin.com/in/usen-obong-isaiah-934a322b1?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
                     <i class="fab fa-linkedin"></i> LinkedIn
                 </a>
-                <a href="https://x.com/Zennexisaiah001" target="_blank">
+                <a href="https://x.com/Cfc_Zennex?t=8dC-hxscrX298DvJIVFljQ&s=09" target="_blank">
                     <i class="fab fa-twitter"></i> Twitter
                 </a>
-                <a href="https://www.facebook.com/profile.php?id=100072204322647&mibextid=ZbWKwL" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=61568992359872" target="_blank">
                     <i class="fab fa-facebook"></i> Facebook
                 </a>
                 <a href="https://www.instagram.com/usenyisaiah09?igsh=NG5mMW9jdGdjZ3B5" target="_blank">
@@ -269,5 +198,23 @@
             </div>
         </p>
     </footer>
+
+    <script>
+        document.getElementById("darkModeToggle").addEventListener("click", function() {
+            document.body.classList.toggle("dark-mode");
+            this.textContent = document.body.classList.contains("dark-mode") ? "☀️" : "🌙";
+        });
+
+        document.getElementById("toggle-about").addEventListener("click", function() {
+            var aboutSection = document.getElementById("about-section");
+            if (aboutSection.style.display === "none") {
+                aboutSection.style.display = "block";
+                this.textContent = "Hide About Me";
+            } else {
+                aboutSection.style.display = "none";
+                this.textContent = "Show About Me";
+            }
+        });
+    </script>
 </body>
 </html>
