@@ -207,7 +207,7 @@ h2 {
 
 .service:hover,
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   background: #00d4ff; /* Electric blue on hover */
   color: #142850; /* Dark text on hover */
 }
@@ -283,6 +283,12 @@ textarea {
   color: #f8f9fa;
 }
 
+form input,
+form textarea {
+  background-color: #1a1a3d;
+  border: 1px solid #00d4ff;
+}
+
 textarea {
   resize: vertical;
   height: 150px;
@@ -292,6 +298,11 @@ input:focus,
 textarea:focus {
   outline: none;
   border-color: #00d4ff; /* Electric blue focus */
+}
+
+form button.btn:hover {
+  background-color: #00a3cc;
+  transform: scale(1.05);
 }
 
 /* === Buttons === */
@@ -397,4 +408,10 @@ footer {
 
 .framed-img.circular {
   border-radius: 50%; /* Circular style for profile photos */
+}
+
+.contact-container img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
